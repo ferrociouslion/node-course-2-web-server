@@ -37,6 +37,12 @@ app.use((req,res,next)=>{
      });
  });
 
+ app.get('/project', (req, res)=>{
+     res.render('project.hbs',{
+         pageTitle:'Project'
+     });
+ });
+
 app.use(express.static(__dirname+'/public'));
 
 hbs.registerHelper('getCurrentYear',()=>{
